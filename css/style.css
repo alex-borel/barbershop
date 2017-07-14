@@ -1,0 +1,1340 @@
+@font-face {
+    font-family: "PT Sans Narrow";
+    font-weight: 700;
+    font-style: normal;
+    src: url("../fonts/ptsansnarrowbold.woff2");
+}
+
+body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.index {
+    background: #000000 url("../img/main-background.jpg") no-repeat center top;
+}
+
+.clearfix::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+/*--- header ---*/
+
+.main-header {
+    margin-bottom: 60px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.price .main-header, .item .main-header, .shop .main-header {
+    height: 67px;
+    margin-bottom: 0;
+}
+
+.main-navigation {
+    float: left;
+    width: 780px;
+}
+
+.main-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0;
+}
+
+.main-navigation li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.main-navigation a {
+    display: block;
+    padding: 25px 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.main-navigation .active {
+    position: relative;
+    background-color: none;
+}
+
+.price .main-navigation a, .item .main-navigation a, .shop .main-navigation a {
+    padding: 20px 20px;
+    padding-bottom: 27px;
+}
+
+.main-navigation .active::after {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
+    display: block;
+    height: 5px;
+    content: "";
+    background-color: #ffffff;
+}
+
+.main-header a.barber-logo {
+    padding-bottom: 18px;
+}
+
+.main-navigation a:hover {
+    background-color: #242424;
+}
+
+.main-navigation .active a:hover {
+    background: none;
+}
+
+.user-block {
+    float: right;
+    max-width: 140px;
+}
+
+.login {
+    position: relative;
+    display: inline-block;
+    padding: 25px 20px;
+    padding-left: 50px;
+    vertical-align: top;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.price .login, .item .login, .shop .login {
+    padding: 20px 20px;
+    padding-bottom: 27px;
+    padding-left: 50px;
+}
+
+.login::before {
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    width: 18px;
+    height: 18px;
+    content: "";
+    background: url("../img/spritesheet.png");
+    background-position: -5px -184px;
+}
+
+.price .login::before, .item .login::before, .shop .login::before {
+    top: 23px;
+}
+
+.login:hover {
+    background-color: #242424;
+}
+
+.login:hover::before {
+    background-position: -5px -158px;
+}
+
+
+/*-- main index.html --*/
+
+.index-logo {
+    width: 368px;
+    height: 204px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.index-logo img {
+    width: 368px;
+    height: 204px;
+}
+
+.features {
+    margin-bottom: 80px;
+    color: #f7f4f1;
+}
+
+.features-item {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.features-item p {
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.features-item:last-child {
+    margin-right: 0;
+}
+
+.features-name {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    padding-bottom: 35px;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.features-name::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    content: "";
+    transform: rotate(45deg);
+    background-color: #ffffff;
+}
+
+.index-content {
+    margin-bottom: 35px;
+    padding: 50px 80px;
+    color: #000000;
+    background: url("../img/index-content-shadow.png") no-repeat center, #f8f5f2 url("../img/pattern-cream.jpg");
+}
+
+.index-content-left {
+    float: left;
+    width: 380px;
+}
+
+.index-content-right {
+    float: right;
+    width: 300px;
+}
+
+.index-content-title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.index-content p {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.news-preview {
+    margin: 0;
+    padding: 0;
+    padding-right: 35px;
+    list-style-type: none;
+}
+
+.news-preview li {
+    margin-bottom: 25px;
+}
+
+.news-preview p {
+    margin-bottom: 0;
+}
+
+.news-preview time {
+    text-transform: none;
+    font-weight: 400;
+}
+
+.index .btn {
+    display: inline-block;
+    margin-right: 16px;
+    padding: 10px 33px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.index .btn:hover, .index .btn:active {
+    background-color: #663d15;
+}
+
+.index .btn.disabled, .index .btn:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.index .btn.disabled:hover, .index .btn:disabled:hover {
+    background-color: #000000;
+}
+
+.gallery {
+    position: relative;
+    height: 260px;
+}
+
+.gallery-content {
+    height: 164px;
+    margin: 0;
+    border: 7px solid #ffffff;
+    background-color: #cccccc;
+}
+
+.gallery-content img {
+    width: 286px;
+    height: 164px;
+}
+
+.gallery .btn {
+    position: absolute;
+    bottom: 0;
+    width: 140px;
+    margin: 0;
+}
+
+.gallery-prev {
+    left: 0;
+}
+
+.gallery-next {
+    right: 0;
+}
+
+.appointment-form input {
+    float: left;
+    width: 106px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 7px 15px;
+    text-transform: uppercase;
+    color: #000000;
+    border: 2px solid #000000;
+    background-color: #f9f6f3;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.appointment-form input:nth-child(2n) {
+    margin-right: 0;
+}
+
+.appointment-form .btn {
+    clear: both;
+    width: 100%;
+    color: #ffffff;
+    border: none;
+    background-color: #000000;
+}
+
+.appointment-form input:focus {
+    border-color: #663d15;
+}
+
+.appointment-form .btn:hover {
+    background-color: #663d15;
+}
+
+
+/*-- main price.html --*/
+
+.price main {
+    padding-bottom: 63px;
+    color: #000000;
+    border: 1px solid #f8f5f2;
+    background: #f8f5f2 url("../img/pattern-cream.jpg");
+    font-weight: 700;
+}
+
+.price main h2 {
+    margin-top: 50px;
+    margin-bottom: 27px;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.price .breadcrumbs ul {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.price .breadcrumbs li {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.price .breadcrumbs a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.price .breadcrumbs a.active {
+    color: #aba9a7;
+}
+
+.price .breadcrumbs li:first-child {
+    position: relative;
+    margin-right: 40px;
+}
+
+.price .breadcrumbs li:first-child::after {
+    position: absolute;
+    top: 3px;
+    left: 65px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    content: "";
+    transform: rotate(45deg);
+    background: #000000;
+}
+
+.price h1 {
+    position: relative;
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.price h1::after, .price h1::before {
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 2px;
+    content: "";
+    background: #000000;
+}
+
+.price h1::before {
+    top: 30px;
+}
+
+.price h1::after {
+    top: 30px;
+    left: 780px;
+}
+
+.price-description-left {
+    float: left;
+    width: 240px;
+}
+
+.price-description-left ul {
+    margin: 0;
+    margin-top: -5px;
+    margin-left: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.price-description-left li {
+    position: relative;
+    margin-top: 13px;
+}
+
+.price-description li::before {
+    position: absolute;
+    top: 7px;
+    left: -17px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    content: "";
+    transform: rotate(45deg);
+    background: #000000;
+}
+
+.price-description-right {
+    float: right;
+    width: 460px;
+    min-height: 225px;
+}
+
+.price-description h3 {
+    margin-bottom: 35px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.price-description table {
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.price-description td {
+    width: 50%;
+    padding: 8px 0;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.price-description td:first-child {
+    padding-left: 17px;
+    text-align: left;
+}
+
+.about-us {
+    margin-top: 57px;
+}
+
+.about-us h3 {
+    margin-bottom: 15px;
+}
+
+.about-us-left {
+    float: left;
+    width: 380px;
+}
+
+.about-us-right {
+    float: right;
+    width: 460px;
+}
+
+.price .btn {
+    display: inline-block;
+    margin-right: 16px;
+    padding: 10px 33px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+
+/*--- main item.html --*/
+
+.item main {
+    padding-bottom: 42px;
+    color: #000000;
+    border: 1px solid #f8f5f2;
+    background: #f8f5f2 url("../img/pattern-cream.jpg");
+}
+
+.item h1 {
+    margin-top: 53px;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.item .breadcrumbs ul {
+    margin: 0;
+    margin-top: -7px;
+    padding: 0;
+    font-size: 0;
+}
+
+.item .breadcrumbs li {
+    position: relative;
+    display: inline-block;
+    margin-left: 45px;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.item .breadcrumbs li:first-child {
+    margin-left: 0;
+}
+
+.item .breadcrumbs li::before {
+    position: absolute;
+    top: 8px;
+    left: -25px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    content: "";
+    transform: rotate(45deg);
+    background-color: #000000;
+}
+
+.item .breadcrumbs li:first-child::before {
+    display: none;
+}
+
+.item .breadcrumbs a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.item .breadcrumbs a.active {
+    color: #aba9a7;
+}
+
+.product-title {
+    margin-bottom: 25px;
+}
+
+.breadcrumbs {
+    margin-bottom: 60px;
+}
+
+.item-photo {
+    float: left;
+    width: 460px;
+    margin-top: -8px;
+}
+
+.item-photo img {
+    box-shadow: 0px 0px 15px 0px rgba(0, 1, 1, 0.2);
+}
+
+.images-list {
+    margin-top: 13px;
+}
+
+.images-list img {
+    margin-right: 17px;
+}
+
+.images-list img:last-child {
+    margin-right: 0;
+}
+
+.item-description {
+    float: right;
+    width: 390px;
+    min-height: 510px;
+}
+
+.item-description .clearfix {
+    margin-top: -2px;
+}
+
+.item-price {
+    margin-top: 35px;
+    font-size: 0;
+}
+
+.item-price span {
+    display: inline-block;
+    padding: 10px 28px;
+    vertical-align: top;
+    background-color: #e5e5e5;
+    font-size: 14px;
+}
+
+.item .btn {
+    display: inline-block;
+    padding: 10px 19px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.btn:hover {
+    background-color: #663d15;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+    color: #aeaeae;
+}
+
+.item-description h2 {
+    margin-top: 60px;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.item-description ul {
+    margin: 0;
+    margin-top: 27px;
+    margin-left: 19px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.item-description li {
+    position: relative;
+}
+
+.item-description li::before {
+    position: absolute;
+    top: 8px;
+    left: -18px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    content: "";
+    transform: rotate(45deg);
+    background-color: #000000;
+}
+
+
+/*-- main shop.html --*/
+
+.shop main {
+    padding-bottom: 48px;
+    color: #000000;
+    border: 1px solid #f8f5f2;
+    background: #f8f5f2 url("../img/pattern-cream.jpg");
+}
+
+.shop h1 {
+    margin-top: 52px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.shop .breadcrumbs {
+    margin-bottom: 40px;
+}
+
+.shop .breadcrumbs ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0;
+}
+
+.shop .breadcrumbs li {
+    position: relative;
+    display: inline-block;
+    margin-left: 45px;
+    font-size: 14px;
+}
+
+.shop .breadcrumbs li::before {
+    position: absolute;
+    top: 8px;
+    left: -25px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    content: "";
+    transform: rotate(45deg);
+    background-color: #000000;
+}
+
+.shop .breadcrumbs li:first-child::before {
+    display: none;
+}
+
+.shop .breadcrumbs li:first-child {
+    margin-left: 0;
+}
+
+.shop .breadcrumbs a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.shop .breadcrumbs .active {
+    color: #aba9a7;
+}
+
+.shop aside {
+    float: left;
+    width: 220px;
+    min-height: 590px;
+}
+
+.shop fieldset {
+    border: none;
+}
+
+.shop legend {
+    margin-left: -12px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.shop fieldset:last-child {
+    margin-top: 32px;
+}
+
+.shop .item-checkbox {
+    position: relative;
+    display: block;
+    margin-top: 14px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.shop .first-checkbox {
+    margin-top: 22px;
+}
+
+.shop .item-checkbox:hover {
+    color: #663d15;
+}
+
+.shop .item-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.shop .item-checkbox input[type="checkbox"]+.checkbox-indicator {
+    position: absolute;
+    left: -10px;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #000000;
+}
+
+.shop .item-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before,
+.shop .item-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    width: 15px;
+    height: 2px;
+    content: "";
+    background-color: #000000
+}
+
+.shop .item-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before {
+    transform: rotate(45deg);
+}
+
+.shop .item-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
+    transform: rotate(-45deg);
+}
+
+.shop .item-radio {
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.shop .first-radio {
+    margin-top: 25px;
+}
+
+.shop .item-radio:hover {
+    color: #663d15;
+}
+
+.shop .item-radio input[type="radio"] {
+    display: none;
+}
+
+.shop .item-radio input[type="radio"]+.radio-indicator {
+    position: absolute;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+.shop .item-radio input[type="radio"]:checked+.radio-indicator::before {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    content: "";
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+.shop .btn {
+    display: block;
+    margin-top: 52px;
+    margin-left: -12px;
+    padding: 9px 31px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.shop .btn:hover {
+    background-color: #663d15;
+}
+
+.shop .product-items {
+    float: left;
+    width: 700px;
+    margin-left: 20px;
+}
+
+.shop .product-items ul {
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
+    font-size: 0;
+}
+
+.shop .product-items .second-items {
+    margin-top: 20px;
+}
+
+.shop .product-items li {
+    display: inline-block;
+    width: 220px;
+    vertical-align: top;
+    box-shadow: 0px 0px 15px 0px rgba(0, 1, 1, 0.2);
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.shop .product-items li {
+    margin-left: 20px;
+}
+
+.shop .product-items li:first-child {
+    margin-left: 0;
+}
+
+.shop .item-info {
+    margin-top: -21px;
+    padding: 16px;
+}
+
+.shop .item-info span {
+    display: inline-block;
+    width: 118px;
+    padding: 10px 0px;
+    text-align: center;
+    vertical-align: top;
+    background-color: #e5e5e5;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.shop .item-info .btn {
+    display: inline-block;
+    margin-top: 0px;
+    padding: 10px 18px;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.shop .product-items p {
+    text-transform: none;
+}
+
+.shop .products-navigator {
+    margin-top: 42px;
+}
+
+.shop .products-navigator ul {
+    font-size: 0;
+}
+
+.shop .pages li {
+    width: 43px;
+    height: 43px;
+    margin-left: 7px;
+    box-shadow: none;
+}
+
+.shop .pages a {
+    display: inline-block;
+    padding: 12px 19px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.shop .pages a:hover {
+    background-color: #663d15;
+}
+
+.shop .pages a.active {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+
+/*-- footer --*/
+
+.main-footer {
+    margin-top: 65px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    color: #ffffff;
+    background: #252525 url("../img/pattern-grey.jpg");
+}
+
+.price .main-footer, .item .main-footer, .shop .main-footer {
+    margin-top: 0;
+    padding-top: 55px;
+    padding-bottom: 40px;
+}
+
+.main-footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-contacts {
+    float: left;
+    width: 320px;
+    margin-right: 60px;
+}
+
+.footer-social {
+    float: left;
+    width: 180px;
+    text-align: center;
+}
+
+.footer-social p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.social-btn {
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    margin: 0 2px;
+    transition: background-position 0.5s, background-color 0.5s;
+    background: #000000 url("../img/spritesheet.png") no-repeat center;
+}
+
+.social-btn:hover {
+    background-color: #ffffff;
+}
+
+.social-btn-vk {
+    background-position: 5px -221px;
+}
+
+.social-btn-fb {
+    background-position: 10px 5px;
+}
+
+.social-btn-inst {
+    background-position: 7px -59px;
+}
+
+.social-btn-vk:hover {
+    background-position: 5px -247px;
+}
+
+.social-btn-fb:hover {
+    background-position: 10px -27px;
+}
+
+.social-btn-inst:hover {
+    background-position: 7px -89px;
+}
+
+.footer-copyright {
+    float: right;
+    max-width: 180px;
+}
+
+.footer-copyright p {
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-copyright .btn {
+    margin-right: 0;
+}
+
+.shop .footer-copyright .btn {
+    margin-top: 0;
+    padding: 9px 24px;
+}
+
+.footer-copyright .btn:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+
+/*-- popup windows --*/
+
+.modal-content {
+    position: absolute;
+    z-index: 12;
+    top: 120px;
+    left: 50%;
+    display: none;
+    width: 300px;
+    margin-left: -230px;
+    padding: 50px 80px;
+    color: #000000;
+    background: #f8f5f2 url("../img/pattern-cream.jpg");
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-map {
+    position: fixed;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    display: none;
+    width: 766px;
+    height: 561px;
+    margin-top: -280px;
+    margin-left: -390px;
+    border: 7px solid white;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-overlay {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-show {
+    display: block;
+    animation: pop 0.7s;
+}
+
+.map-show {
+    display: block;
+    animation: map 1.5s;
+}
+
+.modal-error {
+    animation: shake 0.7s;
+}
+
+.show {
+    display: block;
+}
+
+.modal-content-close {
+    position: absolute;
+    top: 0;
+    right: -34px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background: none;
+    font-size: 0;
+}
+
+.modal-content-close::before, .modal-content-close::after {
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 19px;
+    height: 3px;
+    content: "";
+    border-radius: 1px;
+    background-color: #d0d0d0;
+}
+
+.modal-content-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+    transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.modal-content p {
+    margin: 0;
+    margin-bottom: 14px;
+}
+
+.modal-content .login-form {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.login-form input[type="text"], .login-form input[type="password"] {
+    width: 236px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    color: #000000;
+    border: 2px solid #000000;
+    outline: none;
+    background-color: #f9f6f3;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.login-form .btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.login-form input:focus {
+    border-color: #663d15;
+}
+
+.login-form input.icon-user {
+    background-image: url("../img/spritesheet.png");
+    background-repeat: no-repeat;
+    background-position: 100% -195px;
+}
+
+.login-form input.icon-password {
+    background-image: url("../img/spritesheet.png");
+    background-repeat: no-repeat;
+    background-position: 100% -121px;
+}
+
+.login-form .restore {
+    float: right;
+    color: #000000;
+}
+
+.login-checkbox {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.login-checkbox:hover {
+    color: #663d15;
+}
+
+.login-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.login-checkbox input[type="checkbox"]+.checkbox-indicator {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    width: 15px;
+    height: 2px;
+    content: "";
+    background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before {
+    transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
+    transform: rotate(-45deg);
+}
+
+
+/*-- animations --*/
+
+@keyframes pop {
+    0% {
+        transform: translateY(-2000px);
+    }
+    70% {
+        transform: translateY(50px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-20px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes map {
+    0% {
+        transform: translateX(-2000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
